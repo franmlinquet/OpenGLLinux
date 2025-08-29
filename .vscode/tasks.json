@@ -1,6 +1,20 @@
-/*
 {
+    "version": "2.0.0",
     "tasks": [
+        {
+            "label": "build",
+            "type": "shell",
+            "command": "cmake",
+            "args": [
+                "--build",
+                "build"
+            ],
+            "group": "build",
+            "problemMatcher": [
+                "$gcc"
+            ],
+            "detail": "Compila el proyecto usando CMake"
+        },
         {
             "type": "cppbuild",
             "label": "C/C++: g++ compilar archivo activo",
@@ -24,27 +38,5 @@
             },
             "detail": "Tarea generada por el depurador."
         }
-    ],
-    "version": "2.0.0"
-}*/
-
-{
-  "version": "2.0.0",
-  "tasks": [
-    {
-      "label": "build",
-      "type": "shell",
-      "command": "cmake",
-      "args": [
-        "--build",
-        "build"
-      ],
-      "group": {
-        "kind": "build",
-        "isDefault": true
-      },
-      "problemMatcher": ["$gcc"],
-      "detail": "Compila el proyecto usando CMake"
-    }
-  ]
+    ]
 }
