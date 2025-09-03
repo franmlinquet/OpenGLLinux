@@ -59,7 +59,7 @@ class Shader {
                 std::cerr << "ERROR::SHADER::FRAGMENT::COMPILATION_FAILED\n" << infoLog << std::endl;
             }
 
-             ID = glCreateProgram();
+            ID = glCreateProgram();
             glAttachShader(ID, vertex);
             glAttachShader(ID, fragment);
             glLinkProgram(ID);

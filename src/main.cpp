@@ -1,6 +1,7 @@
 #include <glad/glad.h>
 #include <GLFW/glfw3.h>
 #include <iostream>
+#include "Shader.h"
 
 void framebuffer_size_callback(GLFWwindow* window, int width, int height);
 void processInput(GLFWwindow* window);
@@ -37,7 +38,7 @@ int main()
         std::cerr << "Failed to initialize GLAD" << std::endl;
         return -1;
     }
-    Shader shader();
+    Shader shader("src/vertexShaderSrc.glsl", "src/fragmentShaderSrc.glsl");
 
     float vertices[] =
     {
@@ -80,7 +81,7 @@ int main()
         glClear(GL_COLOR_BUFFER_BIT);
         glClearColor(0.2f, 0.3f, 0.3f, 1.0f);
 
-        glUseProgram(shaderProgram);
+        shader.use();
         glBindVertexArray(VAO);
         glDrawArrays(GL_TRIANGLES, 0, 3);
         glBindVertexArray(0);
