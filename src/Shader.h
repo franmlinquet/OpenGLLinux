@@ -29,6 +29,12 @@ class Shader {
                 vertexCode = vShaderStream.str();
                 fragmentCode = fShaderStream.str();
             }
+            catch (std::ifstream::failure& e) {
+                std::cerr << "ERROR::SHADER::FILE_NOT_SUCCESFULLY_READ: " << e.what() << std::endl;
+            }
+            const char* vShaderCode = vertexCode.c_str();
+            const char* fShaderCode = fragmentCode.c_str();
+            
         }
         void use();
     
