@@ -19,7 +19,15 @@ class Shader {
             vShaderFile.exceptions(std::ifstream::failbit | std::ifstream::badbit);
             fShaderFile.exceptions(std::ifstream::failbit | std::ifstream::badbit);
             try {
-                
+                vShaderFile.open(vertexPath);
+                fShaderFile.open(fragmentPath);
+                std::stringstream vShaderStream, fShaderStream;
+                vShaderStream << vShaderFile.rdbuf();
+                fShaderStream << fShaderFile.rdbuf();
+                vShaderFile.close();
+                fShaderFile.close();
+                vertexCode = vShaderStream.str();
+                fragmentCode = fShaderStream.str();
             }
         }
         void use();
