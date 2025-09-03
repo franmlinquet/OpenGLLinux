@@ -67,7 +67,10 @@ class Shader {
             glDeleteShader(vertex);
             glDeleteShader(fragment);
         }
-        void use();
+        void use() 
+        {
+            glUseProgram(ID);
+        }
     
 }
 
