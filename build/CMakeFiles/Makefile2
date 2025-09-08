@@ -65,18 +65,51 @@ CMAKE_BINARY_DIR = /home/franzlinq/Documentos/GIT_Projects/OpenGLProject/build
 # The main recursive "all" target.
 all: CMakeFiles/glad.dir/all
 all: CMakeFiles/OpenGLProject.dir/all
+all: _deps/glm-build/all
 all: external/glfw/all
 .PHONY : all
 
 # The main recursive "preinstall" target.
+preinstall: _deps/glm-build/preinstall
 preinstall: external/glfw/preinstall
 .PHONY : preinstall
 
 # The main recursive "clean" target.
 clean: CMakeFiles/glad.dir/clean
 clean: CMakeFiles/OpenGLProject.dir/clean
+clean: _deps/glm-build/clean
 clean: external/glfw/clean
 .PHONY : clean
+
+#=============================================================================
+# Directory level rules for directory _deps/glm-build
+
+# Recursive "all" directory target.
+_deps/glm-build/all: _deps/glm-build/glm/all
+.PHONY : _deps/glm-build/all
+
+# Recursive "preinstall" directory target.
+_deps/glm-build/preinstall: _deps/glm-build/glm/preinstall
+.PHONY : _deps/glm-build/preinstall
+
+# Recursive "clean" directory target.
+_deps/glm-build/clean: _deps/glm-build/glm/clean
+.PHONY : _deps/glm-build/clean
+
+#=============================================================================
+# Directory level rules for directory _deps/glm-build/glm
+
+# Recursive "all" directory target.
+_deps/glm-build/glm/all:
+.PHONY : _deps/glm-build/glm/all
+
+# Recursive "preinstall" directory target.
+_deps/glm-build/glm/preinstall:
+.PHONY : _deps/glm-build/glm/preinstall
+
+# Recursive "clean" directory target.
+_deps/glm-build/glm/clean:
+.PHONY : _deps/glm-build/glm/clean
 
 #=============================================================================
 # Directory level rules for directory external/glfw

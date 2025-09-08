@@ -11,6 +11,8 @@ set(CMAKE_MAKEFILE_DEPENDS
   "CMakeFiles/3.22.1/CMakeCCompiler.cmake"
   "CMakeFiles/3.22.1/CMakeCXXCompiler.cmake"
   "CMakeFiles/3.22.1/CMakeSystem.cmake"
+  "_deps/glm-src/CMakeLists.txt"
+  "_deps/glm-src/glm/CMakeLists.txt"
   "../external/glfw/CMake/cmake_uninstall.cmake.in"
   "../external/glfw/CMake/glfw3.pc.in"
   "../external/glfw/CMake/glfw3Config.cmake.in"
@@ -37,9 +39,12 @@ set(CMAKE_MAKEFILE_DEPENDS
   "/usr/share/cmake-3.22/Modules/Compiler/GNU-C.cmake"
   "/usr/share/cmake-3.22/Modules/Compiler/GNU-CXX.cmake"
   "/usr/share/cmake-3.22/Modules/Compiler/GNU.cmake"
+  "/usr/share/cmake-3.22/Modules/FetchContent.cmake"
+  "/usr/share/cmake-3.22/Modules/FetchContent/CMakeLists.cmake.in"
   "/usr/share/cmake-3.22/Modules/FindDoxygen.cmake"
   "/usr/share/cmake-3.22/Modules/FindFontconfig.cmake"
   "/usr/share/cmake-3.22/Modules/FindFreetype.cmake"
+  "/usr/share/cmake-3.22/Modules/FindGit.cmake"
   "/usr/share/cmake-3.22/Modules/FindPackageHandleStandardArgs.cmake"
   "/usr/share/cmake-3.22/Modules/FindPackageMessage.cmake"
   "/usr/share/cmake-3.22/Modules/FindPkgConfig.cmake"
@@ -64,7 +69,10 @@ set(CMAKE_MAKEFILE_OUTPUTS
 
 # Byproducts of CMake generate step:
 set(CMAKE_MAKEFILE_PRODUCTS
+  "_deps/glm-subbuild/CMakeLists.txt"
   "CMakeFiles/CMakeDirectoryInformation.cmake"
+  "_deps/glm-build/CMakeFiles/CMakeDirectoryInformation.cmake"
+  "_deps/glm-build/glm/CMakeFiles/CMakeDirectoryInformation.cmake"
   "external/glfw/src/glfw3Config.cmake"
   "external/glfw/src/glfw3ConfigVersion.cmake"
   "external/glfw/cmake_uninstall.cmake"

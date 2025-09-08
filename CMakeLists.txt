@@ -3,6 +3,17 @@ project(OpenGLProject)
 
 set(CMAKE_CXX_STANDARD 17)
 
+# --- GLM --- FetchContent ---
+include(FetchContent)
+
+FetchContent_Declare(
+	glm
+	GIT_REPOSITORY	git@github.com:g-truc/glm.git
+	GIT_TAG		0.9.9.8
+)
+
+FetchContent_MakeAvailable(glm)
+
 # Ruta a códigofuente
 
 add_subdirectory(external/glfw)
