@@ -165,16 +165,26 @@ int main()
         glBindTexture(GL_TEXTURE_2D, texture2);
 
         /* Transform */
-        glm::vec4 vec(1.0f, 0.0f, 0.0f, 1.0f);
-        glm::mat4 trans = glm::mat4(1.0f);
+        //glm::vec4 vec(1.0f, 0.0f, 0.0f, 1.0f);
+        //glm::mat4 trans = glm::mat4(1.0f);
         
         /* Rotation */
-        trans = glm::translate(trans, glm::vec3(0.5f, -0.5f, 0.0f));
+        /* trans = glm::translate(trans, glm::vec3(0.5f, -0.5f, 0.0f));
         trans = glm::rotate(trans, (float)glfwGetTime(), glm::vec3(0.0, 0.0, 1.0));
         trans = glm::scale(trans, glm::vec3(0.5f, 0.5f, 0.5f));
         
         unsigned int transformLoc = glGetUniformLocation(shader.ID, "transform");
-        glUniformMatrix4fv(transformLoc, 1, GL_FALSE, glm::value_ptr(trans));
+        glUniformMatrix4fv(transformLoc, 1, GL_FALSE, glm::value_ptr(trans)); */
+
+        // Model
+        glm::mat4 model = glm::mat4(1.0f);
+        model = glm::rotate(model, glm::radians(-55.0f), glm::vec3(1.0f, 0.0f, 0.0f));
+        // View
+        glm::mat4 view = glm::mat4(1.0f);
+        view = glm::translate(model, glm::vec3(0.0f, 0.0f, -3.0f));
+        // Projection
+        glm::mat4 projection;
+        projection = glm::perspective(glm::radians(45.0f), 800.0f / 600.0f, 0.1f, 100.0f);
 
         shader.use();
         glBindVertexArray(VAO);
