@@ -209,7 +209,7 @@ int main()
         float radius = 10.0f;
         float camX = static_cast<float>(sin(glfwGetTime()) * radius);
         float camZ = static_cast<float>(cos(glfwGetTime()) * radius);
-        view =  glm::lookAt(glm::vec3(camX, 0.0f, camZ), 
+        view =  glm::lookAt(glm::vec3(camX + 2, 3.0f, camZ * 2), 
                             glm::vec3(0.0f, 0.0f, 0.0f), 
                             glm::vec3(0.0f, 1.0f, 0.0f));       
         shader.setMat4("view", view);
