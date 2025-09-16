@@ -297,6 +297,11 @@ void mouse_callback(GLFWwindow* window, double xposIn, double yposIn)
 
     yaw   += xoffset;
     pitch += yoffset;
+
+    if (pitch > 89.0)
+        pitch = 89.0;
+    if (pitch < -89.0)
+        pitch = -89.0,
 }
 
 void processInput(GLFWwindow* window)
