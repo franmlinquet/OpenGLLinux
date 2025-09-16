@@ -290,6 +290,10 @@ void mouse_callback(GLFWwindow* window, double xposIn, double yposIn)
     float yoffset = lastY - ypos;
     lastX = xpos;
     lastY = ypos;
+
+    const float sensitivity = 0.1f;
+    xoffset *= sensitivity;
+    yoffset *= sensitivity;
 }
 
 void processInput(GLFWwindow* window)
