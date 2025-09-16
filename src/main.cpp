@@ -294,6 +294,9 @@ void mouse_callback(GLFWwindow* window, double xposIn, double yposIn)
     const float sensitivity = 0.1f;
     xoffset *= sensitivity;
     yoffset *= sensitivity;
+
+    yaw   += xoffset;
+    pitch += yoffset;
 }
 
 void processInput(GLFWwindow* window)
