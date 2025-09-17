@@ -57,6 +57,10 @@ class Camera
     }
 
     // View Matrix
+    glm::mat4 GetViewMatrix()
+    {
+        return glm::lookAt(Position, Position + Front, Up);
+    }
 
     // Input Process
 };
