@@ -425,7 +425,8 @@ CMakeFiles/OpenGLProject.dir/src/main.cpp.o: ../src/main.cpp \
   /usr/include/c++/11/bits/fstream.tcc \
   /usr/include/c++/11/sstream \
   /usr/include/c++/11/bits/sstream.tcc \
-  /usr/include/c++/11/iostream
+  /usr/include/c++/11/iostream \
+  ../src/Camera.h
 
 
 /usr/include/c++/11/sstream:
@@ -457,6 +458,8 @@ CMakeFiles/OpenGLProject.dir/src/main.cpp.o: ../src/main.cpp \
 /usr/include/c++/11/streambuf:
 
 /usr/include/c++/11/bits/locale_classes.tcc:
+
+../src/Camera.h:
 
 /usr/include/c++/11/bits/ios_base.h:
 
