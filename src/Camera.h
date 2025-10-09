@@ -79,7 +79,7 @@ class Camera
         Position.y = 0.0f;
     }
     // Mouse Movement
-    void ProcessMouseMovement(float xoffset, float yoffset, GLboolean constrainPich = true)
+    void ProcessMouseMovement(float xoffset, float yoffset, GLboolean constrainPitch = true)
     {
         xoffset *= MouseSensitivity;
         yoffset *= MouseSensitivity;
@@ -87,10 +87,13 @@ class Camera
         Yaw     += xoffset;
         Pitch   += yoffset;
 
-        if (Pitch > 89.0f)
-            Pitch= 89.0f;
-        if (Pitch < -89.0f)
-            Pitch = -89.0f;
+        if (constrainPitch)
+        {
+            if (Pitch > 89.0f)
+                Pitch= 89.0f;
+            if (Pitch < -89.0f)
+                Pitch = -89.0f;
+        }
         updateCameraVectors();
     }
     // Mouse Scroll
